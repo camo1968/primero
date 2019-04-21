@@ -70,6 +70,11 @@ void loop()
       digitalWrite(BLUE, LOW);
       delay(3000);
       servoMotor.write(180);
+     
+                // adicion Carlos Montoya
+                // se incluyò una nueva lectura del keypad para que la puerta se cierre no por tiempo (8 seg) porque puede ser
+                // que no haya pasado aùn el carro o persona, sino por oprimir la tecla # en el keypad
+      
       //      delay(8000);
 
       char closedoor = '*';
@@ -79,6 +84,8 @@ void loop()
         closedoor = Teclado1.getKey() ;
       }
 
+                // aquì termina la adiciòn del cerrado de la puerta al oprimir # en el keypad
+      
       digitalWrite(GREEN, LOW);
       servoMotor.write(0);
       passw1 = "";
